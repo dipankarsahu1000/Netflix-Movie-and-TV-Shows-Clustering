@@ -35,23 +35,76 @@ In this project, we are required to do the following:
 
 <h1> Data Wrangling </h1>
 
+* The null/missing values were taken care of by imputing with suitable values.
+* The values under 'date_added' were parsed into datetime objects.
+* The values under 'cast' and 'listed_in' were converted from string to list.
+* Four new columns called 'month_added', 'year_added', 'lead_actor', 'main_genre' and 'main_country' were created.
 
 
-<h1> Data Visualization & Experimenting with charts </h1>
+<h1> Data Visualization & Exploratory Data Analysis </h1>
 
+The following insights were extracted:
 
-
-<h1> Feature Engineering & Data Pre-processing </h1>
-
-
-
-<h1> ML Model Implementation </h1>
-
+* There are more Movies than TV Shows. Of all the contents, 69.1% are Movies and 30.9% are TV Show.
+* After the year of 2015, there has been rapid increase in the influx of both: Movies and TV Shows.
+* There is a sharp rise in the number of new Movies being added, from 2015 to 2019. For the number of new TV Shows being added each year, there is a steady increase.
+* In the year of 2020, the number of new Movies added was less than the previous year.
+* Most number of Movies were added to Netflix in the month of January, followed by December and October
+* Most number of TV Shows were added to Netflix in the month of December.
+* Some of the most popular genres for the movies are: Dramas, Comedies, Documentaries and Action & Adventure.
+* Some of the most popular genres for the movies are: International TV Shows, Crime TV Shows, Kid's TV Shows, British TV Shows, Docuseries and Anime.
+* Most of the contents for Netflix is produced by United States, followed by India, United Kingdom, Canada, Japan, France, South Korea and Spain.
+* 'TV-MA' is the most common rating for both the Movies and TV Shows.
+* Most of the Movies are of 90 minutes and most of the TV Shows have 1 season.
 
 
 <h1> Hypothesis Testing </h1>
 
+* `Chi-Square Test` is used to check whether there is relation between the 'type' of the content and the 'rating' of the content.
+* `Chi-Square Test` is used to check whether there is relation between the 'type' of the content and the 'main_genre' of the content.
+* `Chi-Square Test` is used to check whether there is relation between the 'main_genre' of the content and the 'rating' of the content.
 
+
+<h1> Feature Engineering & Data Pre-processing </h1>
+
+The following steps were taken:
+
+* Lower Casing
+* Removing Punctuations
+* Removing Non-ASCII Characters
+* Expand Contraction
+* Removing Stopwords & Removing White spaces
+* Text Normalization
+* Tokenization
+* Text Vectorization
+* Dimesionality Reduction
+
+
+<h1> ML Model Implementation </h1>
+
+The following models were fitted over the data:
+
+* K-Means Clustering
+* Agglomerative (Hierarchical) Clustering
 
 
 <h1> Conclusion </h1>
+
+* During the Exploratory Data Analysis, it was observed that on Netflix:
+  - There are more number of Movies compared to TV Shows;
+  - The overall number of Movies and TV Shows have only increased over the years;
+  - Usually in the month of December, more number of contents are added;
+  - The most popular genre for the Movies is Drama and the most popular genre for the TV Shows is International TV Show.
+  - Some of the most content producing countries are US, India, UK, Canada, Japan, France, South Korea and Spain.
+  - The most common rating for both the Movies and the TV Shows is TV-MA.
+  - Most of the Movies have a duration of 90 minutes and most of the TV Shows have only 1 season.
+
+* The textual data was preprocessed by performing actions such as removing non-ASCII characters, removing stopwords, lemmatization, tokenization, vectorization, etc.
+
+* The dimensionality of the preprocessed data was also reduced using the Principal Component Analysis.
+
+* K-Means Clustering was implemented to form 9 clusters. The optimum number of clusters was decided upon through Silhouette Analysis.
+
+* Agglomerative (Hierarchical) Clustering was implemented to form 5 clusters. The optimum number of clusters was decided upon with the help of a Dendrogram.
+
+* The average Silhouette Score for the K-Means Clustering was higher than the average Silhouette Score for the Agglomerative Clustering. So, the K-Means Clustering Model was selected as the final model.
