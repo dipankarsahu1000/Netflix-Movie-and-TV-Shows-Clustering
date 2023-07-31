@@ -17,8 +17,20 @@ In this project, we are required to do the following:
 * The are is a total of 3631 missing/null values in the dataset. The missing values are there in the 'director', 'cast', 'country', 'date_added' and 'rating' columns only.
 
 
-
 <h1> Understanding The Variables </h1>
+
+1. **show_id**: The unique ID for every Movie/TV show.
+2. **type**: An identifier depicting whether the record is a movie or a TV show.
+3. **title**: The title of the show.
+4. **director**: The director of the show.
+5. **cast**: The actors involved.
+6. **country**: The country of production.
+7. **date_added**: The date it was added on Netflix.
+8. **release_year**: The actual release year of the show.
+9. **rating**: The rating of the show.
+10. **duration**: The total duration in minutes or number of seasons.
+11. **listed_in**: The genre of the show.
+12. **description**: The description or the summary of the show.
 
 
 <h1> Data Wrangling </h1>
